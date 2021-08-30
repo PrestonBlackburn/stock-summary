@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#3D6B45',
 
         '&:hover': {
-          backgroundColor: '#3D6B45',
+          backgroundColor: '#EDF5EF',
       },
     },
     drawer: {

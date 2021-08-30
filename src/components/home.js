@@ -84,20 +84,20 @@ export default function Home() {
             <div style={{height: '150px'}} />
 
             <Grid container spacing={6}   
-                direction="row"
+                direction="column"
                 justifyContent="center"
                 alignItems="center">
-                <Grid item md={6} sm={12} xs={12}   style={{ maxHeight:'800px', paddingLeft: '10vw'}}>
+                <Grid item md={10} sm={12} xs={12}   style={{ maxHeight:'800px', paddingLeft: '10vw'}}>
                     <div>
                         <h1 className={classes.heroText}>
                             Making Stock Analysis Easy
                         </h1>
                         <p className={classes.heroSecondText}>
-                            By explaining stock trends in plain English we make it easy to invest
+                            By using machine learning to determine the sentiment of recent financial articles, we can display recent stock trends in plain English. 
                         </p>
                     </div>  
                 </Grid>
-                <Grid item md={6} sm={12} xs={12}  style={{ maxHeight:'800px', paddingLeft: '10vw'}}>
+                <Grid item md={10} sm={12} xs={12}  style={{ maxHeight:'800px'}}>
 
                     <DBSummary />
 
