@@ -16,7 +16,7 @@ export default function DBSummary() {
         {make: "Ford", model: "Mondeo", price: 32000},
         {make: "Porsche", model: "Boxter", price: 72000}
     ];
-    
+    {/* 
     useEffect(() =>  {
         console.log(process.env.REACT_APP_ENDPOINT);
         const response = fetch(`${process.env.REACT_APP_ENDPOINT}getdata`, {
@@ -26,7 +26,7 @@ export default function DBSummary() {
         const responseData = response.text();
         console.log(responseData)
     })
-
+    */}
 
 
 
