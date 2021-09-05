@@ -1,55 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 
-import DBSummary from './grids/dbSummary.js';
-
+import TotalSentiment from './grids/totalSentiment';
+import SentimentTrends from './grids/sentimentTrends';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '100vw',
         position: 'relative',
         top:0, 
-        backgroundColor: '#E5E5E5',
+        backgroundColor: 'white',
     },
 
-
-    card: {
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundColor: 'transparent',
-      },
-      cardContent: {
-        flexGrow: 1,
-      },
-      cardMedia: {
-        paddingTop: '80%',
-      },
-
-      donate: {
+      dataButton: {
         fontFamily: 'Poppins',
         fontStyle: 'normal',
         fontWeight: 'bold',
         fontSize: '32px',
         textTransform: 'capitalize',
         textDecoration: 'none',
-        background: '#EC407A',
         color: 'white',
-        borderRadius: '24px',
+        background: '#3D6B45',
+        boxShadow: '0px 2px 2px rgba(0, 0, 0, 0.25)',
         padding: '5px',
         width: '225px',
         height: '60px',
         borderRadius: '50px',
         '&:hover': {
-            backgroundColor: '#E9C7D2',
+            backgroundColor: '#889F8C',
         },
       },
 
@@ -70,24 +52,33 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'normal',
         fontSize: '24px',
         letterSpacing: '0.05em',
-        textTransform: 'capitalize',
+        color: 'black',
+      },
+
+      sentimentText: {
+        fontFamily: 'Poppins',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: '36px',
+        letterSpacing: '0.05em',
         color: 'black',
       },
   }));
 
 export default function Home() {
-    const classes = useStyles();
+    const classes = useStyles();   
+
 
     return (
         <div className={classes.root}>
-            <div className={classes.backgroundClass} />
             <div style={{height: '150px'}} />
 
             <Grid container spacing={6}   
-                direction="column"
-                justifyContent="center"
+                direction="row"
+                justifyContent="space-around"
                 alignItems="center">
-                <Grid item md={10} sm={12} xs={12}   style={{ maxHeight:'800px', paddingLeft: '10vw'}}>
+
+                <Grid item lg={4} md={6} sm={11} xs={11} align="left"  style={{ maxHeight:'800px', padding: '25px'}}>
                     <div>
                         <h1 className={classes.heroText}>
                             Making Stock Analysis Easy
@@ -95,16 +86,30 @@ export default function Home() {
                         <p className={classes.heroSecondText}>
                             By using machine learning to determine the sentiment of recent financial articles, we can display recent stock trends in plain English. 
                         </p>
+                        <Link to="/datatable" style={{textDecoration: 'none'}} >       
+                            <Button className={classes.dataButton}>
+                                View Data
+                            </Button>
+                        </Link>
                     </div>  
                 </Grid>
-                <Grid item md={10} sm={12} xs={12}  style={{ maxHeight:'800px'}}>
 
-                    <DBSummary />
-
+                <Grid item md={4} sm={11} xs={11} style={{ maxHeight:'800px', padding: '25px', display:'flex', flexDirection:'column', justifyContent:"space-evenly", alignItems: "center"}}>
+                    <TotalSentiment />
                 </Grid>
             </Grid>
             
+            <div style={{height: '150px'}} />
 
+
+            <Grid container spacing={6}   
+                direction="row"
+                justifyContent="space-around"
+                alignItems="center">
+                
+                <SentimentTrends />
+        
+            </Grid>
         </div>
     )
 }

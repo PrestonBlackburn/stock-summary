@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         width: '100vw',
         postion: 'relative',
-        background: '#E5E5E5',
+        background: 'white',
         fontFamily: 'Poppins',
         paddingTop: '50px',
     },
@@ -17,7 +17,7 @@ function Copyright() {
     return (
       <Typography variant="body2" color="textSecondary" align="center">
         {'Copyright © '}
-        <Link color="inherit" href="https://www.prestonblackburn.com/">
+        <Link color="inherit" to="https://www.prestonblackburn.com/">
             Preston Blackburn, 
         </Link>{' '}
         {new Date().getFullYear()}

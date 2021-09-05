@@ -50,18 +50,16 @@ const useStyles = makeStyles((theme) => ({
             padding: '5px',
             paddingLeft: '30px',
             paddingRight: '50px',
-            background: 'rgba(0, 0, 0, 0.0)',
             justifyContent: 'space-between',
             
     },
-    donate: {
+    contactButton: {
         fontFamily: 'Poppins',
         fontStyle: 'normal',
         fontWeight: 'bold',
         fontSize: '28px',
         textTransform: 'capitalize',
-
-        background: 'white',
+        backgroundColor: 'white',
         borderRadius: '24px',
         padding: '5px',
         width: '163px',
@@ -93,7 +91,6 @@ const useStyles = makeStyles((theme) => ({
         transition: theme.transitions.create(['margin', 'width'], {
           easing: theme.transitions.easing.sharp,
           duration: theme.transitions.duration.leavingScreen,
-          background: 'rgba(0, 0, 0, 0.0)',
         }),
       },
       appBarShift: {
@@ -101,8 +98,6 @@ const useStyles = makeStyles((theme) => ({
         transition: theme.transitions.create(['margin', 'width'], {
           easing: theme.transitions.easing.easeOut,
           duration: theme.transitions.duration.enteringScreen,
-          background: 'rgba(0, 0, 0, 0.0)',
-
         }),
         marginRight: drawerWidth,
       },
@@ -128,7 +123,7 @@ export default function Header() {
         <div className={classes.root}>
 
             <Hidden only={['xs', 'sm']}>
-                <AppBar position="relative" elevation={0} style={{background: 'rgba(229, 229, 229, 1)'}}>
+                <AppBar position="relative" elevation={0} style={{background: 'white'}}>
                 <Toolbar className={classes.bar}> 
                     <Link to="/" style={{float: 'right'}}>       
                         <img src={StockLogo} style={{width:'70px'}} />
@@ -146,10 +141,14 @@ export default function Header() {
                     <Link to="/about" className={classes.detail}>       
                         About
                     </Link>
+
+                    <Link to="/datatable" className={classes.detail}>       
+                        View Data
+                    </Link>
                     </div> 
 
                     <a href="www.linkedin.com/in/prestonblackburncheme" style={{textDecoration: 'none'}}>
-                    <Button className={classes.donate}>
+                    <Button className={classes.contactButton}>
                         Contact
                     </Button>
                     </a>
@@ -161,7 +160,7 @@ export default function Header() {
 
 
         <Hidden only={['md','lg','xl']}>
-            <AppBar elevation={0} style={{background:  'rgba(229, 229, 229, 1)'}}
+            <AppBar elevation={0} style={{background:  'white'}}
             position="fixed"
             className={clsx(classes.appBar, {
             [classes.appBarShift]: open,
@@ -215,8 +214,15 @@ export default function Header() {
                 </ListItem>
                 <ListItem button>
                 <ListItemText >
+                    <Link to="/datatable" className={classes.detail}>       
+                        View Data
+                    </Link>
+                </ListItemText>
+                </ListItem>
+                <ListItem button>
+                <ListItemText >
                     <a href="www.linkedin.com/in/prestonblackburncheme" style={{textDecoration: 'none'}}>
-                        <Button className={classes.donate}>
+                        <Button className={classes.contactButton}>
                             Contact
                         </Button>
                     </a>
