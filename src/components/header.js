@@ -147,7 +147,7 @@ export default function Header() {
                     </Link>
                     </div> 
 
-                    <a href="www.linkedin.com/in/prestonblackburncheme" style={{textDecoration: 'none'}}>
+                    <a href="https://www.linkedin.com/in/prestonblackburncheme" target="_blank" style={{textDecoration: 'none'}}>
                     <Button className={classes.contactButton}>
                         Contact
                     </Button>
@@ -221,7 +221,7 @@ export default function Header() {
                 </ListItem>
                 <ListItem button>
                 <ListItemText >
-                    <a href="www.linkedin.com/in/prestonblackburncheme" style={{textDecoration: 'none'}}>
+                    <a href="https://www.linkedin.com/in/prestonblackburncheme" target="_blank" style={{textDecoration: 'none'}}>
                         <Button className={classes.contactButton}>
                             Contact
                         </Button>

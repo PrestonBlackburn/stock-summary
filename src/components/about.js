@@ -70,7 +70,7 @@ export default function About() {
                     <br/>
                     <br />
                     Stocks In English attempts to take a step towards evening the playing field by consolidating the latest financial news 
-                    into an easily interperatable dashboard and open dataset. Articles are categorized as positive, negative, or mixed using machine learning.
+                    into an easily interperatable web page and open dataset. The dataset can be downloaded and incorporated into predictive models. 
                     </p>
                  </Grid>
 
@@ -102,12 +102,8 @@ export default function About() {
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                         You can use the dashboards to quikcly determine if a company is worth investing in. For example, for longer term investments
-                          avoid companies who receive consistently mixed or negative sentiment. It is not recomended to make investing decission based 
-                          soley on a few negative articles.
-                          <br />
-                          <br />
-                          The data can also be pulled in CSV format to be use in other models alongside other datasets.
+                          You can use the data to quickly determine the overall financial sentiment of the oil and gas industry. However, the intended use of this website is
+                           to collect financial article sentiment data to be used with other datasets.
                     </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -138,37 +134,17 @@ export default function About() {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography className={classes.heading}>  Common question 2?</Typography>
+                    <Typography className={classes.heading}> Why did you only chose to look at 7 oil and gas companies?</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                        sit amet blandit leo lobortis eget.
+                        The 7 companies I chose to evaluate make up around 90% of the total value for the energy sector on the S &amp P 500. 
+                        The total market cap of the energy sector is estimated to be around $700 billion and the total market cap of the 7 companies is around $650 billion as of 9/1/21.
+                        
                     </Typography>
                     </AccordionDetails>
                 </Accordion>     
                 </Grid>
-
-                <Grid item xs={10} md={8}>
-                <Accordion>
-                    <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
-                    >
-                    <Typography className={classes.heading}>Common question 2?</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                    <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                        sit amet blandit leo lobortis eget.
-                    </Typography>
-                    </AccordionDetails>
-                </Accordion>     
-                </Grid>
-
-
-
 
             <Grid container alignItems="center" justifyContent="center" direction="column">
                 <Grid item xs={10} md={8}>
@@ -217,7 +193,7 @@ export default function About() {
                          <br />
                             A score greater than 0.7 is positive, a score less than 0.3 is negative, and in between is mixed.
                          <br />
-                            The downloadable dataset includes the raw setneminet scores, which can be used in models instead of the categorical data. 
+                            The downloadable dataset includes the raw sentiment scores, and the sentences that they are based on. Feel free to creat your own models to re-calculate the sentiment of each article. 
                     </Typography>
                     </AccordionDetails>
                 </Accordion>     
@@ -230,12 +206,14 @@ export default function About() {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography className={classes.heading}>Common question 2?</Typography>
+                    <Typography className={classes.heading}>What does the date column refer to?</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                        sit amet blandit leo lobortis eget.
+                        The dates are related to when the data was first scraped and analyzed. Every three days I scrape and process new articles and record the date. 
+                        <br />
+                        <br />
+                        If I switch my scraper to Selenium I might add the actual article publication date. Being able to interact with the DOM would make it easier to pull the date.   
                     </Typography>
                     </AccordionDetails>
                 </Accordion>     
@@ -248,12 +226,12 @@ export default function About() {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography className={classes.heading}>Common question 2?</Typography>
+                    <Typography className={classes.heading}>Where can I learn more about the project and get the code?</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                        sit amet blandit leo lobortis eget.
+                        You can find out more about the project on my portfolio website:
+                        <a href="https://www.prestonblackburn.com/projects" target="_blank" style={{textDecoration:"none", color:'#3D6B45', fontWeight:'bold'}}> prestonblackburn.com </a> 
                     </Typography>
                     </AccordionDetails>
                 </Accordion>     

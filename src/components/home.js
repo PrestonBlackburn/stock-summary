@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-
+import Hidden from '@material-ui/core/Hidden';
 import TotalSentiment from './grids/totalSentiment';
 import SentimentTrends from './grids/sentimentTrends';
 
@@ -94,22 +94,31 @@ export default function Home() {
                     </div>  
                 </Grid>
 
+                <Hidden only={['md','lg','xl']}>
+                    <Grid item sm={11} xs={11} style={{ height:'100px', padding: '25px'}}>
+                    </Grid>
+                </Hidden>
+
                 <Grid item md={4} sm={11} xs={11} style={{ maxHeight:'800px', padding: '25px', display:'flex', flexDirection:'column', justifyContent:"space-evenly", alignItems: "center"}}>
                     <TotalSentiment />
                 </Grid>
             </Grid>
-            
+
             <div style={{height: '150px'}} />
 
 
             <Grid container spacing={6}   
                 direction="row"
                 justifyContent="space-around"
-                alignItems="center">
+                alignItems="center"
+                style={{backgroundColor:'#F5F5F5'}}>
                 
                 <SentimentTrends />
         
             </Grid>
+
+        <div style={{height: '50px'}} />
+    
         </div>
     )
 }
